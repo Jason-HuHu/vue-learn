@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    测试动态绑定：<el-input v-bind="msg" v-model="msg"></el-input>
     <h2>Essential Links</h2>
     <ul>
       <li>
