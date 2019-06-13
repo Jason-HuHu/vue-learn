@@ -88,6 +88,121 @@ npm i element-ui -S
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
-  
+```
+
+## Vue中的几个基本概念
+
+### 组件
+
+### 路由
+
+### 指令
+
+> 指令是带有v- 前缀的特殊属性，指令用于在表达式的值改变时，将某些行为应用到DOM上
+
+```html
+<div id="app">
+    <p v-if="seen">现在你看到我了</p>
+</div>
+    
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    seen: true
+  }
+})
+</script>
+```
+
+### 参数
+
+> 参数在指令后以冒号指明，例如v-bind指令被用来响应的更新HTML属性
+
+```html
+<div id="app">
+    <pre><a v-bind:href="url">菜鸟教程</a></pre>
+</div>
+    
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    url: 'http://www.runoob.com'
+  }
+})
+</script>
+```
+
+### 修饰符
+
+> 修饰符是以半角句号 （.）指明的特殊后缀，用于指出一个指令应该以特殊方式绑定，例如，**.prevent** 修饰符告诉 **v-on** 指令对于触发的事件调用 **event.preventDefault()**：
+
+```html
+<form v-on:submit.prevent="onSubmit"></form>
+```
+
+### 过滤器
+
+> Vue.js 允许你自定义过滤器，被用作一些常见的文本格式化。由"管道符"指示, 格式如下：
+
+```html
+<!-- 在两个大括号中 -->
+{{ message | fun }}
+
+<!-- 在 v-bind 指令中 -->
+<div v-bind:id="rawId | formatId"></div>
+```
+
+过滤器函数接受表达式的值作为第一个参数。
+
+以下实例对输入的字符串第一个字母转为大写：
+
+```html
+<div id="app">
+  {{ message | capitalize }}
+</div>
+    
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    message: 'test'
+  },
+  filters: {
+    capitalize: function (value) {
+      if (!value) return ''
+      value = value.toString()
+      return value.charAt(0).toUpperCase() + value.slice(1)
+    }
+  }
+})
+</script>
+```
+
+过滤器是 JavaScript 函数，因此可以接受参数：
+
+```vue
+{{ message | filterA('arg1', arg2) }}
+```
+
+### 缩写
+
+- v-bind缩写
+
+```vue
+<!-- 完整语法 -->
+<a v-bind:href="url"></a>
+<!-- 缩写 -->
+<a :href="url"></a>
+```
+
+- v-on缩写
+
+```vue
+<!-- 完整语法 -->
+<a v-on:click="doSomething"></a>
+<!-- 缩写 -->
+<a @click="doSomething"></a>
 ```
 

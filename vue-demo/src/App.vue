@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <!--在页面中放置一个路由容器-->
     <router-view/>
   </div>
 </template>
