@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <el-input v-focus></el-input>
   </div>
 </template>
 
@@ -10,6 +11,16 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  directives:{
+    //注册一个局部使用的指令 v-focus
+    focus:{
+      //指令的定义
+      inserted: function (el) {
+        //聚焦元素
+        el.focus();
+      }
     }
   }
 }

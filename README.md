@@ -94,7 +94,43 @@ npm i element-ui -S
 
 ### 组件
 
+#### 组件是什么
+
+> 组件是可复用的Vue实例，我们可以在一个通过new Vue 创建的Vue根实例中，把这个组件作为自定义元素来使用
+
+```vue
+// 定义一个名为 button-counter 的新组件
+Vue.component('button-counter', {
+  data: function () {
+    return {
+      count: 0
+    }
+  },
+  template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+})
+
+//使用这个组件
+<div id="components-demo">
+  <button-counter></button-counter>
+</div>
+new Vue({ el: '#components-demo' })
+```
+
+因为组件是可复用的 Vue 实例，所以它们与 `new Vue` 接收相同的选项，例如 `data`、`computed`、`watch`、`methods` 以及生命周期钩子等。仅有的例外是像 `el` 这样根实例特有的选项。
+
+**data**必须是函数，而不能是一个对象，只有这样每个实例才可以维护一份被返回对象的独立拷贝
+
+#### 组件的组织
+
+> 通常一个应用会以一棵嵌套的组件树的形式来组织
+
+![](components-tre.png)
+
+为了能在模板中使用，这些组件必须先注册以便 Vue 能够识别。这里有两种组件的注册类型：**全局注册**和**局部注册**。
+
 ### 路由
+
+>**vue-router**
 
 ### 指令
 
@@ -205,4 +241,6 @@ new Vue({
 <!-- 缩写 -->
 <a @click="doSomething"></a>
 ```
+
+###Vue基本语法
 
