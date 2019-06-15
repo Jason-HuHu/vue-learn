@@ -36,12 +36,19 @@
 - 安装vue-cli
 
   ```sh
+  # 安装vue-cli2
   npm install -global vue-cli
   # 查看安装的版本
   vue -V
+  # 安装vue-cli3（安装2之后就不用安装3）
+  npm install -g @vue/cli
+  # 查看安装的版本
+  vue -v
   ```
 
 ## 初始化项目 
+
+### CLI2 初始化项目
 
 ```sh
 vue init webpack vue-demo
@@ -57,25 +64,63 @@ npm run dev
 # 默认打开浏览器输入：http://localhost:8080/
 ```
 
-## 项目模块简介
-
-![](project-structre.png)
+### CLI3初始化项目
 
 ```sh
-# /build            -->webpack使用的文件，一般不用改
-# /config           -->配置文件，项目的一些配置信息
-# /node_modules     --> vue项目中安装的依赖
-# /src              -->源码文件夹
-	# /assets          -->资源文件，一般放置静态资源
-	# /components      -->自己编写的一些组件
-	# /router          --> 路由信息
-	# App.vue          --> app组件，包含三个部分：模板、script、样式
-	# main.js          -->项目入口
-# /static           -->编译好的文件会放在这个目录下
-# .babelrc          -->babel编译参数，vue开发需要babel编译
-# index.html 		-->主页面
-# package.json 		-->项目文件，记录一些命令，和依赖
+# vue create <project-name> 
+vue create vue-demo-cli3
+#Tips: 第一次创建项目时会提醒你选择一些需要的组件，可以用默认的，也可以自定义选择
+#Tips: 安装@vue/cli 之后依然可以像cli2一样初始化项目：vue init webpack vue-demo
+
 ```
+
+![](.\resource\create-project.png)
+
+初始化之后与CLI2的处理方式一样，可以直接运行，也可以导入IDE操作
+
+## 项目模块简介
+
+#### CLI2的项目结构
+
+![](./resource/project-structre.png)
+
+```sh
+vue-demo
+├──/build            -->webpack使用的文件，一般不用改
+├──/config           -->配置文件，项目的一些配置信息
+├──/node_modules     --> vue项目中安装的依赖
+├──/src              -->源码文件夹
+	├──/assets          -->资源文件，一般放置静态资源
+	├──/components      -->自己编写的一些组件
+	├──/router          --> 路由信息
+	├──App.vue          --> app组件，包含三个部分：模板、script、样式
+	├──main.js          -->项目入口
+├──/static           -->编译好的文件会放在这个目录下
+├──.babelrc          -->babel编译参数，vue开发需要babel编译
+├──index.html 		-->主页面
+├──package.json 		-->项目文件，记录一些命令，和依赖
+```
+
+
+
+#### CLI3的项目结构
+
+![](.\resource\project-structre-cli3.png)
+
+```sh
+vue-demo-cli3
+├──/node_models			--> 依赖库
+├──/public				--> 
+├──/src					-->源码文件
+	├──/assets				-->
+	├──/components			-->组件
+	├──App.vue
+	├──main.js
+├──.gitignore
+├──
+```
+
+
 
 ## 安装依赖
 
@@ -246,6 +291,11 @@ new Vue({
 
 > 混入 (mixins)定义了一部分可复用的方法或者计算属性。混入对象可以包含任意组件选项。当组件使用混入对象时，所有混入对象的选项将被混入该组件本身的选项。
 
-###Ajax(axios)
+### Ajax(axios)
 
-###Vue基本语法
+
+
+### Vue基本语法
+
+
+
