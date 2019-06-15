@@ -74,7 +74,7 @@ vue create vue-demo-cli3
 
 ```
 
-![](.\resource\create-project.png)
+![](./resource/create-project.png)
 
 初始化之后与CLI2的处理方式一样，可以直接运行，也可以导入IDE操作
 
@@ -110,14 +110,17 @@ vue-demo
 ```sh
 vue-demo-cli3
 ├──/node_models			--> 依赖库
-├──/public				--> 
+├──/public				--> 不被webpack打包，直接复制到指定目录中去
 ├──/src					-->源码文件
-	├──/assets				-->
+	├──/assets				-->静态资源文件
 	├──/components			-->组件
-	├──App.vue
-	├──main.js
-├──.gitignore
-├──
+	├──App.vue				-->主组件		
+	├──main.js				-->入口文件
+├──.gitignore			-->git过滤文件
+├──bable.config.js		-->编译配置
+├──package.json			-->管理项目依赖的包
+├──package-lock.json	-->管理项目依赖到具体版本
+├──vue.config.js		--> 可选的配置文件，如果有会被@vue/cli-service自动加载
 ```
 
 
