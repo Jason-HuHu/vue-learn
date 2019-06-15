@@ -105,7 +105,7 @@ vue-demo
 
 #### CLI3的项目结构
 
-![](.\resource\project-structre-cli3.png)
+![](./resource/project-structre-cli3.png)
 
 ```sh
 vue-demo-cli3
