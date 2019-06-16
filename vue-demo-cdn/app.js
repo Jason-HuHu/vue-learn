@@ -60,10 +60,19 @@ var app5 = new Vue({
 //所需要的数据对象
 var data = {
 	a:1
-}
+};
 
 //Vue实例
 var vm = new Vue({
 	//选项
+	el:'#app6',
 	data:data
 })
+//实例属性，带有前缀$
+vm.$data === data  //true
+vm.$el === document.getElementById("app6") //true
+//$watch是一个实例方法
+vm.$watch('a',function(newValue,oldValue){
+	//这个回调将会在vm.a 的值改变后调用
+})
+

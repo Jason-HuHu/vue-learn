@@ -18,6 +18,7 @@ Vue.use(ElementUI);
 new Vue({
   /**
    * 最后的效果将会替换页面中id 为app 的div元素
+   * 一定是html中的根容器元素
    */
   el: '#app',
   /*使用路由*/
