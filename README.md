@@ -300,6 +300,49 @@ new Vue({
 
 ### Vue基本语法
 
+- ```javascript
+  var vm = new Vue({
+   el: '#app',
+    // 把 store 对象提供给 “store” 选项，这可以把 store 的实例注入所有的子组件
+    store,
+    components: { Counter },
+    template: `
+      <div class="app">
+        <counter></counter>
+      </div>
+    `
+  })
+  ```
+
+- ```vue
+  this.$refs
+  ```
+
+- ```vue
+  this.$router.push('/grzx/index')
+  ```
+
+### Vuex使用指南
+
+- 官方文档
+
+> <https://vuex.vuejs.org/zh/guide/getters.html>
+
+- 核心概念
+
+> 1.state
+>
+> 2.getter
+>
+> 3.mutation
+>
+> 4.action
+>
+> 5.module
+
+- 项目结构
+- 
+
 # 部署
 
 
@@ -322,5 +365,47 @@ npm install -g serve
 npm run build
 # 进入build生成的dist 同级目录，执行
 serve -s dist
+```
+
+
+
+### 模拟后端数据
+
+Mock.js
+
+### ES6语法
+
+- 教程
+
+> <http://es6.ruanyifeng.com/>
+>
+> <https://babeljs.io/docs/en/learn>
+
+- export、import、export default
+
+>ES6模块主要有两个功能：export和import
+>export用于对外输出本模块（一个文件可以理解为一个模块）变量的接口
+>import用于在一个模块中加载另一个含有export接口的模块。
+>也就是说使用export命令定义了模块的对外接口以后，其他JS文件就可以通过import命令加载这个模块（文件）
+
+- export 与export default 的区别
+
+>1、export与export default均可用于导出常量、函数、文件、模块等
+>2、你可以在其它文件或模块中通过import+(常量 | 函数 | 文件 | 模块)名的方式，将其导入，以便能够对其进行使用
+>3、在一个文件或模块中，export、import可以有多个，export default仅有一个
+>4、通过export方式导出，在导入时要加{ }，export default则不需要
+
+- ...对象展开运算符
+
+> 使用对象展开运算符，可以将此对象混入到外部对象中
+
+```javascript
+let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
+x; // 1
+y; // 2
+z; // { a: 3, b: 4 
+
+let n = { x, y, ...z };
+n; // { x: 1, y: 2, a: 3, b: 4 }
 ```
 

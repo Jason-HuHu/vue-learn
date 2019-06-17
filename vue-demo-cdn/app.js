@@ -76,3 +76,7 @@ vm.$watch('a',function(newValue,oldValue){
 	//这个回调将会在vm.a 的值改变后调用
 })
 
+Vue.component('component-a',{
+	
+})
+
