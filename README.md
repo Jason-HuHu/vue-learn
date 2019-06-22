@@ -321,6 +321,27 @@ new Vue({
 - ```vue
   this.$router.push('/grzx/index')
   ```
+  
+- ``` $emit ```
+
+
+### Vue生命周期
+
+> 每个 Vue 实例在被创建时都要经过一系列的初始化过程——例如，需要设置数据监听、编译模板、将实例挂载到 DOM 并在数据变化时更新 DOM 等。同时在这个过程中也会运行一些叫做**生命周期钩子**的函数，这给了用户在不同阶段添加自己的代码的机会。
+
+- 生命周期图示
+
+![](./resource/lifecycle.png)
+
+- 生命周期钩子函数
+  - beforeCreate（组件实例刚被创建，组件属性计算之前，如data属性）
+  - created（组件实例创建完成，属性已绑定，但DOM还未生成，`$el`属性还不存在）
+  - beforeMount(模板编译/挂载之前)
+  - mounted（模板编译/挂载之后）
+  - beforeUpdate（组件更新之前）
+  - updated（组件更新之后）
+  - beforeDestroy（组件销毁前调用）
+  - destroyed（组件销毁后调用）
 
 ### Vuex使用指南
 
@@ -341,7 +362,8 @@ new Vue({
 > 5.module
 
 - 项目结构
-- 
+
+  
 
 # 部署
 
