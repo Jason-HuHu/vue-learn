@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8">
+		<title>Vue.js入门实战</title>
+		<link rel="stylesheet" href="style.css" />
+		<!--开发环境版本，包含了有帮助的命令行警告-->
+		<!-- <script src="<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+		<!-- 生产环境版本，优化了尺寸和速度 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	</head>
+	<body>
+		<h1>多实例</h1>
+		<div id="app-one">
+			<h1>{{title}}</h1>
+		</div>
+
+		<div id="app-two">
+			<h1>{{title}}</h1>
+			<button v-on:click="changeTitle">chane app one title</button>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>
