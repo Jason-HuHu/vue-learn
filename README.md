@@ -433,3 +433,10 @@ let n = { x, y, ...z };
 n; // { x: 1, y: 2, a: 3, b: 4 }
 ```
 
+# 开发中遇到的问题
+
+- `:key`
+- `...mapGetters['unitId', 'batchId']`
+- `$store.dispatch`
+
+- `computed`
