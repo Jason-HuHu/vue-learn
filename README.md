@@ -429,6 +429,8 @@ Mock.js
 
 - 教程
 
+> [JavaScript基础教程]: https://wangdoc.com/javascript/index.html	"基础"
+>
 > <http://es6.ruanyifeng.com/>
 >
 > <https://babeljs.io/docs/en/learn>
