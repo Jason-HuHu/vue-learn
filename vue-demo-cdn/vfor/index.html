@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8">
+		<title>Vue.js入门实战</title>
+		<link rel="stylesheet" href="style.css" />
+		<!--开发环境版本，包含了有帮助的命令行警告-->
+		<!-- <script src="<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+		<!-- 生产环境版本，优化了尺寸和速度 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p>{{ name }}</p>
+
+			<h1>v-for 循环</h1>
+			<ul>
+				<li v-for="character in characters">
+					{{character}}
+				</li>
+			</ul>
+			<ul>
+				<li v-for="user in users">
+					{{user.name}}-{{user.age}}
+				</li>
+			</ul>
+
+			<div v-for="(user,index) in users">
+				<h1>{{index}} . {{user.name}}</h1>
+				<p>Age : {{user.age}}</p>
+			</div>
+			<!--template 可以避免渲染过多的div-->
+			<template v-for="(user,index) in users">
+				<h1>{{index}} . {{user.name}}</h1>
+				<p>Age : {{user.age}}</p>
+			</template>
+		</div>
+		
+
+		<script src="app.js"></script>
+	</body>
+</html>

@@ -12,32 +12,20 @@
 	<body>
 		<div id="app">
 			<p>{{ name }}</p>
+
+			<h1>Computed计算属性</h1>
+			<button v-on:click="a++">Add to A</button>
+			<button v-on:click="b++">Add to B</button>
+			<p>A - {{a}}}</p>
+			<p>B - {{b}}}</p>
+<!--			<p>Age + A = {{ addToA() }}</p>-->
+<!--			<p>Age + B = {{ addToB() }}</p>-->
+
+			<p>Age + A = {{ addToA }}</p>
+			<p>Age + B = {{ addToB }}</p>
 		</div>
 		
-		<div id="app1">
-			<p v-if="seen">符合条件才能看到</p>
-		</div>
-		<div id="app2">
-			<ol>
-				<li v-for="todo in todos">
-					{{todo.text}}
-				</li>
-			</ol>
-		</div>
-		<div id="app3">
-			<p>{{message}}</p>
-			<button v-on:click="revertMessage">逆转消息</button>
-		</div>
-		<div id="app4">
-			<p>{{message}}</p>
-			<input v-model="message"/>
-		</div>
-		
-		<div id="app5">
-			<ol>
-				<todo-item></todo-item>
-			</ol>
-		</div>
+
 		<script src="app.js"></script>
 	</body>
 </html>

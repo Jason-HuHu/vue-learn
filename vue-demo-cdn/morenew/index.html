@@ -10,33 +10,14 @@
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 	</head>
 	<body>
-		<div id="app">
-			<p>{{ name }}</p>
+		<h1>多实例</h1>
+		<div id="app-one">
+			<h1>{{title}}</h1>
 		</div>
-		
-		<div id="app1">
-			<p v-if="seen">符合条件才能看到</p>
-		</div>
-		<div id="app2">
-			<ol>
-				<li v-for="todo in todos">
-					{{todo.text}}
-				</li>
-			</ol>
-		</div>
-		<div id="app3">
-			<p>{{message}}</p>
-			<button v-on:click="revertMessage">逆转消息</button>
-		</div>
-		<div id="app4">
-			<p>{{message}}</p>
-			<input v-model="message"/>
-		</div>
-		
-		<div id="app5">
-			<ol>
-				<todo-item></todo-item>
-			</ol>
+
+		<div id="app-two">
+			<h1>{{title}}</h1>
+			<button v-on:click="changeTitle">chane app one title</button>
 		</div>
 		<script src="app.js"></script>
 	</body>
