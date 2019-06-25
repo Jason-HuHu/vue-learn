@@ -4,6 +4,7 @@
     <h1>{{title}}</h1>
     <users></users>
     <app-footer></app-footer>
+    <child :title="title" v-on:listenToChild="showChildData"></child>
   </div>
 </template>
 
@@ -11,17 +12,24 @@
   import Header from '@/components/Header'
   import Footer from '@/components/Footer'
   import User from '@/components/User'
+  import Child from '@/components/Child'
   export default {
     name:"home",
     components:{
       //起名：app-header，否则默认就是header
       "app-header":Header,
       "app-footer":Footer,
-      "users":User
+      "users":User,
+      "child":Child
     },
     data() {
       return{
         title : "主页"
+      }
+    },
+    methods:{
+      showChildData: function (data) {
+        this.title = data;
       }
     }
   }
