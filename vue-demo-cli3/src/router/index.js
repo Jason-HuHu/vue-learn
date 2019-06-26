@@ -16,3 +16,4 @@ let Router = new VueRouter({
     },
     routes: [].concat([])
 })
+export default Router
