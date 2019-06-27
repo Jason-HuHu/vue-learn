@@ -26,7 +26,7 @@
                 <mt-cell v-for="n in 6" :title="'选项 ' + n" />
             </mt-tab-container-item>
         </mt-tab-container>
-        <mt-tabbar v-model="selected">
+        <mt-tabbar v-model="selected" >
             <mt-tab-item id="外卖">
 <!--                <img slot="icon" src="~/assets/logo.png">-->
                 外卖
@@ -37,7 +37,7 @@
             </mt-tab-item>
             <mt-tab-item id="发现">
 <!--                <img slot="icon" src="/assets/logo.png">-->
-                发现
+                <button v-on:click="goToDiscover">发现</button>
             </mt-tab-item>
             <mt-tab-item id="我的">
 <!--                <img slot="icon" src="~/assets/logo.png">-->
@@ -78,6 +78,10 @@
             },
             clickItem () {
                 console.log("点到了")
+            },
+            goToDiscover() {
+                console.info("到发现页")
+                this.$router.push("/discover")
             }
         },
         computed: {
