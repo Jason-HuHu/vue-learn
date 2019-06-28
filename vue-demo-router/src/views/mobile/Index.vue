@@ -26,14 +26,13 @@
                 <mt-cell v-for="n in 6" :title="'选项 ' + n" />
             </mt-tab-container-item>
         </mt-tab-container>
-        <mt-tabbar v-model="selected" >
-            <mt-tab-item id="外卖">
-<!--                <img slot="icon" src="~/assets/logo.png">-->
-                外卖
+        <mt-tabbar v-model="selected">
+            <mt-tab-item id="首页">
+                首页
             </mt-tab-item>
             <mt-tab-item id="订单">
 <!--                <img slot="icon" src="~/assets/logo.png">-->
-                订单
+                <p v-on:click="goToService">服务</p>
             </mt-tab-item>
             <mt-tab-item id="发现">
 <!--                <img slot="icon" src="/assets/logo.png">-->
@@ -82,6 +81,10 @@
             goToDiscover() {
                 console.info("到发现页")
                 this.$router.push("/discover")
+            },
+            goToService () {
+                console.log("跳转到服务页面")
+                this.$router.push("/service")
             }
         },
         computed: {

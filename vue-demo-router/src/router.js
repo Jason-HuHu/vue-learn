@@ -29,6 +29,11 @@ export default new Router({
       component : () => import('./views/mobile/Index.vue')
     },
     {
+      path: '/service',
+      name: 'service',
+      component: () => import('./views/mobile/Service.vue')
+    },
+    {
       path: '/discover',
       name: 'discover',
       component: () => import('./views/mobile/Discover.vue')
