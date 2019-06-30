@@ -87,7 +87,7 @@
             <blog-post :title="post.title"
                        :author="post.author"
                        :content="post.content"
-                       @enlarge-text="postFontSize++"
+                       @enlarge-text="enlarge"
                        v-on:reset-text="postFontSize=1">
             </blog-post>
         </div>
@@ -122,6 +122,11 @@
                 this.menus = [
                     {menuId:1,name:"菜单一",icon:"el-icon-message",itemGroup:{}}
                     ]
+            },
+            // 直接在标签内部可以使用 $event接收子组件的值，如果是用一个方法监听，则传过来的值，作为方法参数
+            enlarge(enlargeAmount,arg2) {
+                console.log("子组件传值：" +enlargeAmount + "" +  arg2)
+                this.postFontSize += enlargeAmount
             }
         }
     }
